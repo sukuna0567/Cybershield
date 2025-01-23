@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>CyberShield</h1>
+    </header>
+
+    <main>
+        <section id="upload-section">
+            <h2>Importer un fichier</h2>
+            <form id="upload-form" enctype="multipart/form-data">
+                <label for="file">Choisissez un fichier :</label>
+                <input type="file" id="file" name="file" required>
+
+                <label for="file-type">Type de fichier :</label>
+                <select id="file-type" name="file-type">
+                    <option value="image">Image</option>
+                    <option value="video">Vidéo</option>
+                    <option value="bot">Fichier Bot</option>
+                </select>
+
+                <label for="visibility">Visibilité :</label>
+                <select id="visibility" name="visibility">
+                    <option value="public">Public</option>
+                    <option value="private">Privé</option>
+                </select>
+
+                <button type="submit">Importer</button>
+            </form>
+
+            <div id="upload-response"></div>
+        </section>
+
+        <section id="files-section">
+            <h2>Fichiers Publics</h2>
+            <div id="public-files" class="file-list"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CyberShield. Tous droits réservés.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
